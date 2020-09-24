@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img class="logo" src="images/logo.png" alt="Logo"/></a>
+            <!-- navigation -->
+            <div class="toggleMenu" onclick="menuToggle()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Newsletters</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>That's What<br><span>I Like</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ullam dignissimos veritatis cumque quaerat sapiente quo quas ipsam alias magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#">View All Product</a>
+            </div>
+            <div class="imgBox">
+                <img class="pepsi" src="images/pepsi001.png" alt="Pepsi">
+            </div>
+        </div>
+
+        <ul class="thumb">
+        <!-- Change page decoration like background color and img. for change called onclick function -->
+            <li><img onclick="imgSlider('images/pepsi001.png');changeBgColor('#0062be')" src="images/pepsi001.png" alt=""></li>
+
+            <li><img onclick="imgSlider('images/pepsi002.png');changeBgColor('#e60c2c')" src="images/pepsi002.png" alt=""></li>
+
+            <li><img onclick="imgSlider('images/pepsi003.png');changeBgColor('#1e1e1e')" src="images/pepsi003.png" alt=""></li>
+
+        </ul>
+        <ul class="social">
+            <!-- Social Media Icon -->
+            <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+
+<!-- javascript Section -->
+<script type="text/javascript">
+// Function For Change Pepsi Img when click on thumb img
+    function imgSlider(anything){
+        document.querySelector('.pepsi').src =anything;
+    }
+// Function For Change Background Color
+    function changeBgColor(color) {
+        const sec = document.querySelector('.sec');
+        sec.style.background = color;
+    }
+// Function for Toggling Navigation
+    function menuToggle() {
+        const toggleMenu = document.querySelector('.toggleMenu');
+        const navigation = document.querySelector('.navigation');
+        toggleMenu.classList.toggle('active');
+        navigation.classList.toggle('active');
+    }
+</script>
+</body>
+</html>
+<!--
+Project Owner : Tonmoy Acherjee
+Github Link   : https://github.com/tonmoyac
+Linkding      : https://www.linkedin.com/in/tonmoyac -->
